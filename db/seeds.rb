@@ -8,10 +8,13 @@
 
 require 'faker'
 
-20.times do
-  animal = Animal.new(
-    name: Faker::Creature::Animal.name
-  )
-  animal.save
-  puts 'created Animal'
-end
+Animal.destroy_all
+
+animals = Animal.create([
+                          { name: 'dog' },
+                          { name: 'cat' },
+                          { name: 'horse' },
+                          { name: 'pig' },
+                          { name: 'hamster' },
+                          { name: 'tortoise' }
+                        ])
