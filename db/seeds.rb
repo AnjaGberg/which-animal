@@ -15,6 +15,6 @@ animals = Animal.create([
                           { name: 'cat' },
                           { name: 'horse' },
                           { name: 'pig' },
-                          { name: 'hamster' },
-                          { name: 'tortoise' }
+                          { name: 'giraffe' },
+                          { name: 'turtle' }
                         ])
