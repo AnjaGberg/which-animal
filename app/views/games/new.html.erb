@@ -1,4 +1,6 @@
 <div class="container">
   <h1>Which animal is this?</h1>
-  <p><%= @animal.name %></p>
+  <div class="picture">
+    <%= image_tag("#{@animal.name}.jpg") %>
+  </div>
 </div>
