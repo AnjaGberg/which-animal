@@ -14,4 +14,8 @@
  *= require_self
  */
 
+ // CSS partials
+ @import "components/index";
+
+ // external libraries
  @import "bootstrap/scss/bootstrap";

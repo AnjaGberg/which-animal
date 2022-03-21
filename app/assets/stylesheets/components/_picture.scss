@@ -1,0 +1,12 @@
+.picture {
+  width: 75%;
+  height: 85vh;
+  align-self: center;
+
+  img {
+    height: inherit;
+    width: inherit;
+    object-fit: cover;
+    object-position: center;
+  }
+}
