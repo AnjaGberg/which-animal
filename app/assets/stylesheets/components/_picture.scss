@@ -2,10 +2,11 @@
   width: 75%;
   height: 85vh;
   align-self: center;
+  position: relative;
 
   img {
     height: inherit;
-    width: inherit;
+    width: 100%;
     object-fit: cover;
     object-position: center;
   }
