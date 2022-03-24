@@ -3,10 +3,10 @@
   <div class="picture">
     <%= image_tag("#{@animal.name}.jpg") %>
     <div class="layer" data-controller="tiles">
-      <div class="row h-25 w-100 m-0" data-action="click->tiles#hide">
-        <div data-tiles-target="tile" class="tile col-4"></div>
-        <div data-tiles-target="tile" class="tile col-4"></div>
-        <div data-tiles-target="tile" class="tile col-4"></div>
+      <div class="row h-25 w-100 m-0">
+        <div data-action="click->tiles#hide" data-tiles-target="tile" class="tile col-4"></div>
+        <div data-action="click->tiles#hide" data-tiles-target="tile" class="tile col-4"></div>
+        <div data-action="click->tiles#hide" data-tiles-target="tile" class="tile col-4"></div>
       </div>
       <div class="row h-25 w-100 m-0">
         <div class="tile col-4"></div>
