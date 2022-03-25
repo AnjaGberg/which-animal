@@ -2,9 +2,28 @@
   <h1>Which animal is this?</h1>
   <div class="picture">
     <%= image_tag("#{@animal.name}.jpg") %>
-    <div class="row h-25"></div>
-    <div class="row h-25"></div>
-    <div class="row h-25"></div>
-    <div class="row h-25"></div>
+    <%# removed layer with d-none for testing %>
+    <div class="layer d-none" data-controller="tiles">
+      <div class="row h-25 w-100 m-0">
+        <div data-action="click->tiles#hide" data-tiles-target="tile" class="tile col-4"></div>
+        <div data-action="click->tiles#hide" data-tiles-target="tile" class="tile col-4"></div>
+        <div data-action="click->tiles#hide" data-tiles-target="tile" class="tile col-4"></div>
+      </div>
+      <div class="row h-25 w-100 m-0">
+        <div class="tile col-4"></div>
+        <div class="tile col-4"></div>
+        <div class="tile col-4"></div>
+      </div>
+      <div class="row h-25 w-100 m-0">
+        <div class="tile col-4"></div>
+        <div class="tile col-4"></div>
+        <div class="tile col-4"></div>
+      </div>
+      <div class="row h-25 w-100 m-0">
+        <div class="tile col-4"></div>
+        <div class="tile col-4"></div>
+        <div class="tile col-4"></div>
+      </div>
+    </div>
   </div>
 </div>
