@@ -2,7 +2,8 @@
   <h1>Which animal is this?</h1>
   <div class="picture">
     <%= image_tag("#{@animal.name}.jpg") %>
-    <div class="layer" data-controller="tiles">
+    <%# removed layer with d-none for testing %>
+    <div class="layer d-none" data-controller="tiles">
       <div class="row h-25 w-100 m-0">
         <div data-action="click->tiles#hide" data-tiles-target="tile" class="tile col-4"></div>
         <div data-action="click->tiles#hide" data-tiles-target="tile" class="tile col-4"></div>

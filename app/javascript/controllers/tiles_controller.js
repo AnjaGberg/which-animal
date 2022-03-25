@@ -7,7 +7,7 @@ export default class extends Controller {
     console.log("The 'tiles' controller is now loaded!")
   }
 
-  hide() {
-    this.tileTarget.classList.add("d-none");
+  hideTile() {
+    this.tileTarget.forEach
   }
 }
