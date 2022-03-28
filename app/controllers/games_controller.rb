@@ -4,6 +4,8 @@ class GamesController < ApplicationController
   end
 
   def score
+    @animal = params[:token]
     @answer = params[:answer]
+    @result = @animal == @answer ? "correct!" : "not correct"
   end
 end
