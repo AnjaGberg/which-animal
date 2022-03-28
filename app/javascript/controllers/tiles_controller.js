@@ -6,7 +6,6 @@ export default class extends Controller {
   connect() {
     console.log("The 'tiles' controller is now loaded!")
     this.counter = 0
-    console.log(this.counter)
   }
 
   hide(event) {
