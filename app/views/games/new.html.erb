@@ -27,5 +27,15 @@
     </div>
   </div>
   <div data-tiles-target="output" class="clicks"></div>
-  <%= render 'form' %>
+  <div class="answer" data-controller="result">
+    <%= render 'form' %>
+    <button data-action="click->result#show">Test button</button>
+    <div class="modal" data-result-target="modal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                This is a modal
+            </div>
+        </div>
+    </div>
+  </div>
 </div>
