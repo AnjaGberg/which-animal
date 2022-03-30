@@ -8,6 +8,10 @@ export default class extends Controller {
   }
 
   show(event){
-    console.log(event);
+    let modalController = this.application.getControllerForElementAndIdentifier(
+      this.modalTarget,
+      "modal"
+    );
+    modalController.open();
   }
 }
