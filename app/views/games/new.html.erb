@@ -27,8 +27,12 @@
     </div>
   </div>
   <div data-tiles-target="output" class="clicks"></div>
-  <div class="answer" data-controller="result">
+  <div class="answer" data-controller="result insert">
     <%= render 'form' %>
+    <div data-insert-target="result">
+    </div>
+    <h1>Result</h1>
+    <%= @result %>
     <button type="button" class="btn" data-action="click->result#show">Test button</button>
     <div class="modal" data-controller="modal" data-result-target="modal">
         <div class="modal-dialog">

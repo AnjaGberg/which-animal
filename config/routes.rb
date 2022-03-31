@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   root "games#new"
 
   resources :games, only: [:new]
+  resources :animal
   # post '/', to: 'games#score'
-  post 'score', to: 'games#score'
+  post '/', to: 'games#score'
 end
