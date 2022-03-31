@@ -4,7 +4,7 @@ export default class extends Controller {
   static targets = ["modal"]
 
   connect() {
-    console.log(this.modalTarget);
+    console.log("result controller connected");
   }
 
   show(event){

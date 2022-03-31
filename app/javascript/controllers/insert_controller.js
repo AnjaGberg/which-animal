@@ -5,9 +5,8 @@ export default class extends Controller {
   static targets = ["result", "form"]
 
   connect() {
-    console.log(this.element)
-    console.log(this.resultTarget)
-    console.log(this.formTarget)
+    console.log("insert controller connected")
+    console.log(this.formTarget.outerHTML)
   }
 
   send(event) {
@@ -21,6 +20,9 @@ export default class extends Controller {
     .then(response => response.json())
     .then((data) => {
       this.resultTarget.insertAdjacentHTML("beforeend", data.inserted_item)
+      // this.formTarget.outerHTML = data.form
+      // console.log(data.form)
+      // console.log(this.formTarget.outerHTML)
     })
   }
 }
