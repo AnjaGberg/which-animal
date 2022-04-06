@@ -1,9 +1,9 @@
 import {Controller} from "@hotwired/stimulus";
 
 export default class extends Controller {
+  static targets = ['content']
 
   connect() {
-    console.log("modal controller is now connected")
   }
 
   open() {
@@ -18,5 +18,6 @@ export default class extends Controller {
     this.element.removeAttribute("style");
     this.element.classList.remove("show");
     document.getElementsByClassName("modal-backdrop")[0].remove();
+    this.contentTarget.innerHTML="";
   }
 }

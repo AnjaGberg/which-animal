@@ -5,8 +5,6 @@ export default class extends Controller {
   static targets = ["result", "form"]
 
   connect() {
-    console.log("insert controller connected")
-    console.log(this.formTarget.outerHTML)
   }
 
   send(event) {

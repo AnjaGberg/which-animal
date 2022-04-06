@@ -4,10 +4,10 @@ export default class extends Controller {
   static targets = ["modal"]
 
   connect() {
-    console.log("result controller connected");
   }
 
   show(event){
+    console.log(this.modalTarget)
     let modalController = this.application.getControllerForElementAndIdentifier(
       this.modalTarget,
       "modal"
