@@ -1,13 +1,14 @@
 <div class="container" data-controller="tiles">
-  <h1>Which animal is this?</h1>
+  <h1>Guess the animal!</h1>
+  <div data-tiles-target="output" class="clicks">Click on a tile!</div>
   <div class="picture">
     <%= image_tag("#{@animal.name}.jpg") %>
     <%# removed layer with d-none for testing %>
     <div class="layer">
       <div class="row h-25 w-100 m-0">
-        <div id="1" data-tiles-target="tile" data-action="click->tiles#hide" class="tile col-4"></div>
+        <div id="topleft" data-tiles-target="tile" data-action="click->tiles#hide" class="tile col-4"></div>
         <div id="2" data-tiles-target="tile" data-action="click->tiles#hide" class="tile col-4"></div>
-        <div id="3" data-tiles-target="tile" data-action="click->tiles#hide" class="tile col-4"></div>
+        <div id="topright" data-tiles-target="tile" data-action="click->tiles#hide" class="tile col-4"></div>
       </div>
       <div class="row h-25 w-100 m-0">
         <div id="4" data-tiles-target="tile" data-action="click->tiles#hide" class="tile col-4"></div>
@@ -20,22 +21,20 @@
         <div id="9" data-tiles-target="tile" data-action="click->tiles#hide" class="tile col-4"></div>
       </div>
       <div class="row h-25 w-100 m-0">
-        <div id="10" data-tiles-target="tile" data-action="click->tiles#hide" class="tile col-4"></div>
+        <div id="bottomleft" data-tiles-target="tile" data-action="click->tiles#hide" class="tile col-4"></div>
         <div id="11" data-tiles-target="tile" data-action="click->tiles#hide" class="tile col-4"></div>
-        <div id="12" data-tiles-target="tile" data-action="click->tiles#hide" class="tile col-4"></div>
+        <div id="bottomright" data-tiles-target="tile" data-action="click->tiles#hide" class="tile col-4"></div>
       </div>
     </div>
   </div>
-  <div data-tiles-target="output" class="clicks"></div>
   <div class="answer" data-controller="result insert">
     <%= render 'form' %>
-    <button type="button" class="btn" data-action="click->result#show">Test button</button>
     <div class="modal" data-controller="modal" data-result-target="modal">
         <div class="modal-dialog">
           <div class="modal-content">
             <h1>Result</h1>
             <div class="result-show" data-modal-target="content"></div>
-            <button type="button" class="btn" data-action="click->modal#close">Close</button>
+            <button type="button" class="btn" data-action="click->modal#close">Try again</button>
           </div>
         </div>
     </div>

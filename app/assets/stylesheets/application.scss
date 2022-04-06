@@ -14,8 +14,14 @@
  *= require_self
  */
 
+
  // CSS partials
  @import "components/index";
 
  // external libraries
  @import "bootstrap/scss/bootstrap";
+
+//general
+body {
+  background-color: #00b093d4;
+}
