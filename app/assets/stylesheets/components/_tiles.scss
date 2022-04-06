@@ -6,8 +6,24 @@
   width: 100%;
 
   .tile {
-    background-color: black;
-    border: 1px solid grey;
+    background-color: #464646;
+    border: 1px solid #00b093d4;
+  }
+
+  #topleft {
+    border-radius: 10px 0 0 0;
+  }
+
+  #topright {
+    border-radius: 0  10px 0 0;
+  }
+
+  #bottomleft {
+    border-radius: 0 0 0 10px;
+  }
+
+  #bottomright {
+    border-radius: 0 0 10px 0;
   }
 
   .hidden {

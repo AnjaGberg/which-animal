@@ -1,13 +1,16 @@
 .picture {
   width: 80%;
-  height: 85vh;
+  height: 50vh;
   align-self: center;
   position: relative;
+  margin-bottom: 1rem;
+  border-radius: 10px;
 
   img {
     height: inherit;
     width: 100%;
     object-fit: cover;
     object-position: center;
+    border-radius: 10px;
   }
 }

@@ -3,9 +3,6 @@ import { Controller } from "@hotwired/stimulus"
 export default class extends Controller {
   static targets = ["tile", "output"]
 
-  initialize() {
-  }
-
   hide(event) {
     this.tileTargets.forEach(tile => {
       document.getElementById(event.target.id).classList.add("hidden");
