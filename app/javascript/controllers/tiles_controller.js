@@ -12,6 +12,12 @@ export default class extends Controller {
   }
 
   updateOutput() {
-    this.outputTarget.innerText = `You have turned ${this.counter} tiles!`
+    if (this.counter == 1) {
+      this.tiles = "tile";
+    } else{
+      this.tiles = "tiles";
+    }
+
+    this.outputTarget.innerText = `You have turned ${this.counter} ${this.tiles}!`
   }
 }
