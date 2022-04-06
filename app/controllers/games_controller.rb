@@ -8,8 +8,9 @@ class GamesController < ApplicationController
     @answer = params[:answer]
     @result = @animal == @answer ? "correct!" : "not correct"
     respond_to do |format|
-      format.html { redirect_to root_path }
+      format.html
       format.json
+      format.js
     end
   end
 end
