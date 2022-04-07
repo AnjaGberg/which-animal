@@ -1,7 +1,7 @@
 import {Controller} from "@hotwired/stimulus";
 
 export default class extends Controller {
-  static targets = ['content']
+  static targets = ['content', 'buttons']
 
   open() {
     document.body.classList.add("modal-open");
@@ -16,5 +16,6 @@ export default class extends Controller {
     this.element.classList.remove("show");
     document.getElementsByClassName("modal-backdrop")[0].remove();
     this.contentTarget.innerHTML="";
+    this.buttonsTarget.innerHTML="";
   }
 }

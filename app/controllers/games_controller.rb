@@ -6,6 +6,7 @@ class GamesController < ApplicationController
   def score
     @animal = params[:token]
     @answer = params[:answer]
+    @won = @animal == @answer
     fetch_result
     respond_to do |format|
       format.html
@@ -17,7 +18,7 @@ class GamesController < ApplicationController
   private
 
   def fetch_result
-    @result = if @animal == @answer
+    @result = if @won
                 "That's correct! It's a #{@animal}!"
               else
                 "Hmm...it's not a #{@answer}. Turn another tile and try again!"

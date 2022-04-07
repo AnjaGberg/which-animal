@@ -14,6 +14,8 @@
  *= require_self
  */
 
+ // colors
+  @import "config/colors";
 
  // CSS partials
  @import "components/index";
@@ -21,12 +23,29 @@
  // external libraries
  @import "bootstrap/scss/bootstrap";
 
+
+
+ //font
+ @font-face {
+  font-family: 'Scribble';
+  src: url('Scribble.ttf');
+}
+
 //general
+.profiler-results {
+  display: none;
+}
+
 body {
-  background-color: #00b093d4;
+  background-color: $green;
 
   a {
     text-decoration: none;
     color: inherit;
+  }
+
+  h1 {
+    font-family: "Scribble";
+    margin: 0;
   }
 }
