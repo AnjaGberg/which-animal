@@ -31,5 +31,7 @@ export default class extends Controller {
       "modal"
     );
     modalController.close();
+
+    // this.outputTarget.insertAdjacentHTML('beforeend','hello');
   }
 }

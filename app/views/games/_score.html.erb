@@ -1,1 +1,5 @@
-<div></div><%= @result %>
+<% if @won %>
+  <div data-controller="win" data-win-target="modal"><%= @result %></div>
+<% else %>
+  <%= @result %>
+<% end %>
