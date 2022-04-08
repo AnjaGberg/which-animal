@@ -6,7 +6,7 @@ class GamesController < ApplicationController
   def score
     @animal = params[:token]
     @answer = params[:answer]
-    @won = @animal == @answer
+    @won = @animal.downcase == @answer
     fetch_result
     respond_to do |format|
       format.html
@@ -19,9 +19,9 @@ class GamesController < ApplicationController
 
   def fetch_result
     @result = if @won
-                "That's correct! It's a #{@animal}!"
+                "That's correct! It's a #{@animal.capitalize}!"
               else
-                "Hmm...it's not a #{@answer}. Turn another tile and try again!"
+                "Hmm...it's not a #{@answer.capitalize}. Turn another tile and try again!"
               end
   end
 end
