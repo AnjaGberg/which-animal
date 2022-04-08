@@ -6,7 +6,7 @@ class GamesController < ApplicationController
   def score
     @animal = params[:token]
     @answer = params[:answer]
-    @won = @animal.downcase == @answer
+    @won = @animal == @answer.downcase
     fetch_result
     respond_to do |format|
       format.html
