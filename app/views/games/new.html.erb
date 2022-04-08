@@ -1,6 +1,5 @@
 <div class="container" data-controller="tiles">
   <div data-tiles-target="output" class="clicks">Click on a tile to start!</div>
-  <div class="again-button"></div>
   <div class="picture">
     <%= image_tag("#{@animal.name}.jpg") %>
     <%# removed layer with d-none for testing %>
@@ -28,7 +27,7 @@
     </div>
   </div>
   <div class="answer" data-controller="result">
-    <%= render 'form' %>
+    <div class="again-button"><%= render 'form' %></div>
     <%= render 'modal' %>
   </div>
 </div>

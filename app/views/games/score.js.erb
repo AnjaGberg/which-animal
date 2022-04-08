@@ -1,5 +1,5 @@
 document.querySelector(".result-show").insertAdjacentHTML("beforeend", "<%= j render("score") %>");
-document.querySelector(".buttons").insertAdjacentHTML("beforeend", "<%= j render("modal_buttons") %>");
+document.querySelector(".buttons").insertAdjacentHTML("beforeend", "<%= j render("modal_button") %>");
 <% if @won %>
-  document.querySelector(".again-button").insertAdjacentHTML("beforeend", "<%= j render("play_button") %>");
+  document.querySelector(".again-button").innerHTML = "<%= j render("play_button") %>";
 <% end %>
