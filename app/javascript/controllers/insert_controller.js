@@ -4,9 +4,6 @@ import { csrfToken } from "@rails/ujs"
 export default class extends Controller {
   static targets = ["result", "form"]
 
-  connect() {
-  }
-
   send(event) {
     event.preventDefault()
 

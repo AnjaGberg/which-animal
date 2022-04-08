@@ -4,6 +4,5 @@ Rails.application.routes.draw do
 
   resources :games, only: [:new]
   resources :animal
-  # post '/', to: 'games#score'
   post '/', to: 'games#score'
 end
