@@ -1,5 +1,6 @@
 <% if @won %>
-  <button class="btn-modal"><%= link_to 'Play again', root_path %></button>
+  <div data-controller="win"></div>
+  <button class="btn-modal" data-action="click->tiles#showAll">Show picture</button>
 <% else %>
   <button type="button" class="btn-modal" data-action="click->modal#close">Try again</button>
 <% end %>

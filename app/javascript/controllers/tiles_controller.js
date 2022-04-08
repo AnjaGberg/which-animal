@@ -1,7 +1,7 @@
 import { Controller } from "@hotwired/stimulus"
 
 export default class extends Controller {
-  static targets = ["tile", "output"]
+  static targets = ["tile", "output", 'modal']
 
   hide(event) {
     this.tileTargets.forEach(tile => {
@@ -25,5 +25,13 @@ export default class extends Controller {
     this.tileTargets.forEach(tile => {
       tile.classList.add("hidden");
     })
+
+    let modalController = this.application.getControllerForElementAndIdentifier(
+      this.modalTarget,
+      "modal"
+    );
+    modalController.close();
+
+    // this.outputTarget.insertAdjacentHTML('beforeend','hello');
   }
 }

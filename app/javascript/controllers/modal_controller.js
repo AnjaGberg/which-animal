@@ -3,6 +3,10 @@ import {Controller} from "@hotwired/stimulus";
 export default class extends Controller {
   static targets = ['content', 'buttons']
 
+  // connect() {
+  //   this.element[this.identifier] = this;
+  // }
+
   open() {
     document.body.classList.add("modal-open");
     this.element.setAttribute("style", "display: block;");
