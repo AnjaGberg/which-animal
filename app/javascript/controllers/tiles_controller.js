@@ -20,4 +20,10 @@ export default class extends Controller {
 
     this.outputTarget.innerText = `You have turned ${this.counter} ${this.tiles}!`
   }
+
+  showAll(){
+    this.tileTargets.forEach(tile => {
+      tile.classList.add("hidden");
+    })
+  }
 }
