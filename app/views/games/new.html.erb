@@ -1,8 +1,7 @@
 <div class="container" data-controller="tiles">
   <div data-tiles-target="output" class="clicks">Click on a tile to start!</div>
   <div class="picture">
-    <%= image_tag("#{@animal.name}.jpg") %>
-    <%# removed layer with d-none for testing %>
+    <div class="image"><%= image_tag("#{@animal.name}.jpg") %></div>
     <div class="layer">
       <div class="row h-25 w-100 m-0">
         <div id="topleft" data-tiles-target="tile" data-action="click->tiles#hide" class="tile col-4"></div>
