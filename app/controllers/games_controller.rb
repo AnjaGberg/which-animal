@@ -5,6 +5,7 @@ class GamesController < ApplicationController
 
   def score
     @animal = params[:token]
+    # @names = Name.where(animal_id: @animal.id)
     @answer = params[:answer]
     @won = @animal == @answer.downcase
     fetch_result
