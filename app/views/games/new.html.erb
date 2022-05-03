@@ -1,32 +1,36 @@
-<div class="container" data-controller="tiles images">
+<div class="container " data-controller="tiles images">
   <div data-tiles-target="output" class="clicks">Click on a tile to start!</div>
-  <div class="picture">
-    <div data-images-target="image" class="image"><%= image_tag("#{@animal.name}.jpg") %></div>
-    <div class="layer">
-      <div class="row h-25 w-100 m-0">
-        <div id="topleft" data-tiles-target="tile" data-action="click->tiles#hide" class="tile col-4"></div>
-        <div id="2" data-tiles-target="tile" data-action="click->tiles#hide" class="tile col-4"></div>
-        <div id="topright" data-tiles-target="tile" data-action="click->tiles#hide" class="tile col-4"></div>
+  <div class="row justify-content-center">
+    <div class="col-12 col-sm-10 col-md-8 col-lg-6 col-xl-4 col-xxl-3">
+      <div class="picture">
+        <div data-images-target="image" class="image"><%= image_tag("#{@animal.name}.jpg") %></div>
+        <div class="layer">
+          <div class="row h-25 w-100 m-0">
+            <div id="topleft" data-tiles-target="tile" data-action="click->tiles#hide" class="tile col-4"></div>
+            <div id="2" data-tiles-target="tile" data-action="click->tiles#hide" class="tile col-4"></div>
+            <div id="topright" data-tiles-target="tile" data-action="click->tiles#hide" class="tile col-4"></div>
+          </div>
+          <div class="row h-25 w-100 m-0">
+            <div id="4" data-tiles-target="tile" data-action="click->tiles#hide" class="tile col-4"></div>
+            <div id="5" data-tiles-target="tile" data-action="click->tiles#hide"class="tile col-4"></div>
+            <div id="6" data-tiles-target="tile" data-action="click->tiles#hide" class="tile col-4"></div>
+          </div>
+          <div class="row h-25 w-100 m-0">
+            <div id="7" data-tiles-target="tile" data-action="click->tiles#hide" class="tile col-4"></div>
+            <div id="8" data-tiles-target="tile" data-action="click->tiles#hide" class="tile col-4"></div>
+            <div id="9" data-tiles-target="tile" data-action="click->tiles#hide" class="tile col-4"></div>
+          </div>
+          <div class="row h-25 w-100 m-0">
+            <div id="bottomleft" data-tiles-target="tile" data-action="click->tiles#hide" class="tile col-4"></div>
+            <div id="11" data-tiles-target="tile" data-action="click->tiles#hide" class="tile col-4"></div>
+            <div id="bottomright" data-tiles-target="tile" data-action="click->tiles#hide" class="tile col-4"></div>
+          </div>
+        </div>
       </div>
-      <div class="row h-25 w-100 m-0">
-        <div id="4" data-tiles-target="tile" data-action="click->tiles#hide" class="tile col-4"></div>
-        <div id="5" data-tiles-target="tile" data-action="click->tiles#hide"class="tile col-4"></div>
-        <div id="6" data-tiles-target="tile" data-action="click->tiles#hide" class="tile col-4"></div>
-      </div>
-      <div class="row h-25 w-100 m-0">
-        <div id="7" data-tiles-target="tile" data-action="click->tiles#hide" class="tile col-4"></div>
-        <div id="8" data-tiles-target="tile" data-action="click->tiles#hide" class="tile col-4"></div>
-        <div id="9" data-tiles-target="tile" data-action="click->tiles#hide" class="tile col-4"></div>
-      </div>
-      <div class="row h-25 w-100 m-0">
-        <div id="bottomleft" data-tiles-target="tile" data-action="click->tiles#hide" class="tile col-4"></div>
-        <div id="11" data-tiles-target="tile" data-action="click->tiles#hide" class="tile col-4"></div>
-        <div id="bottomright" data-tiles-target="tile" data-action="click->tiles#hide" class="tile col-4"></div>
+      <div class="answer" data-controller="result">
+        <div class="again-button"><%= render 'form' %></div>
+        <%= render 'modal' %>
       </div>
     </div>
-  </div>
-  <div class="answer" data-controller="result">
-    <div class="again-button"><%= render 'form' %></div>
-    <%= render 'modal' %>
   </div>
 </div>
